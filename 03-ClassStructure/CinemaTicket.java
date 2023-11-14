@@ -1,10 +1,21 @@
 public class CinemaTicket {
     
-    static String cinemaName = "Kino";
+    static String cinemaName = "Morning Star Cinema";
     String filmTitle;
     int row;
     int seat;
     int price;
+
+    public CinemaTicket(String filmTitle, int row, int seat)
+    {
+        this.filmTitle = filmTitle;
+        this.row = row;
+        this.seat = seat;
+        if(row<=2)
+            price = 10;
+        else
+            price = 25;     
+    }
 
 
     String display()
@@ -17,13 +28,11 @@ public class CinemaTicket {
     public static void main(String[] args)
     {
 
-        CinemaTicket x1 = new CinemaTicket();
-        x1.filmTitle="Movie 2";
-        x1.row=1;
-        x1.seat=4;
-        x1.price=77;
+        CinemaTicket x1 = new CinemaTicket("Gladiator",2,3);
+        CinemaTicket x2 = new CinemaTicket("Gladiator",7,1);
 
-        System.out.println(display());
+        System.out.println(x1.display());
+        System.out.println(x2.display());
 
     }
 

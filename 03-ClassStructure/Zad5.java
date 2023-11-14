@@ -45,15 +45,15 @@ public class Zad5 {
 
     static float sine(int x)
     {
-        float z = (float)Math.toDegrees(x);
+        float z = (float)Math.toRadians(x);
         float y = (float)Math.sin(z);
         return y;
     }
 
     public static void main(String[] args)
     {
-
-        
+           
+        System.out.println(sine(90));
 
     }
 
